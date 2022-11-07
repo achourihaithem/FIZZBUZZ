@@ -49,6 +49,8 @@ The separate code layers of MVVM are:
 
 
 ## to be added
-- Add local database
+- Save output history in a local database
 - Improve design
-- dependency injection
+- Add dependency injection
+- Add UI tests
+ 
