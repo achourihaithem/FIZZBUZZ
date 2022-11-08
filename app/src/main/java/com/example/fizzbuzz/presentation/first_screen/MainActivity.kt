@@ -56,12 +56,13 @@ class MainActivity : AppCompatActivity() {
             )
 
             resetForm()
-
-            val intent = Intent(this, ResultActivity::class.java)
-            intent.putExtra(Constants.DATA_GAME, gameModel)
-            startActivity(intent)
-
+           navigateToResultScreen(gameModel)
         }
+    }
+    private fun navigateToResultScreen(gameModel:GameModel){
+        val intent = Intent(this, ResultActivity::class.java)
+        intent.putExtra(Constants.DATA_GAME, gameModel)
+        startActivity(intent)
     }
 
     /**
