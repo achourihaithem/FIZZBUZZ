@@ -13,6 +13,6 @@ object Constants {
     const val INVALID_LIMIT_SECOND_INTEGER_ERROR = "Limit must higher of the 2nd int"
     const val INVALID_LENGTH_LIMIT_ERROR = "limit must under then: 1 000 000"
 
-    const val INVALID_STRINS_LENGTH_ERROR = "The max length of a string is 10 "
+    const val INVALID_STRINGS_LENGTH_ERROR = "The max length of a string is 10 "
 
 }

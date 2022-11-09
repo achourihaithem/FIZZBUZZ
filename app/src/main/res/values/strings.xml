@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">FIZZ BUZZ</string>
 
-    <string name="app_title">FIZZ BUZZ GAME</string>
+    <string name="app_title">fizz buzz game</string>
     <string name="first_int_hint">First Integer</string>
     <string name="second_int_hint">Second Integer</string>
     <string name="limit_hint">Limit</string>
     <string name="first_string_hint">First String</string>
     <string name="second_string_hint">Second String</string>
-    <string name="button_text">VALIDATE</string>
+    <string name="button_text">validate</string>
 
 
 </resources>
