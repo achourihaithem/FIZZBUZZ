@@ -24,7 +24,7 @@ The separate code layers of MVVM are:
 - View: The purpose of this layer is to inform the ViewModel about the user’s action. This layer observes the ViewModel and does not contain any kind of application logic.
 - ViewModel: It exposes those data streams which are relevant to the View. Moreover, it serves as a link between the Model and the View.
 
-**MVVM Best Pratice:**
+**MVVM Best Practice:**
 - Avoid references to Views in ViewModels.
 - Instead of pushing data to the UI, let the UI observe changes to it.
 - Distribute responsibilities, add a domain layer if needed.

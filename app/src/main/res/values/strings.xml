@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FIZZ BUZZ</string>
+    <string name="app_name">fizz buzz</string>
 
     <string name="app_title">fizz buzz game</string>
     <string name="first_int_hint">First Integer</string>

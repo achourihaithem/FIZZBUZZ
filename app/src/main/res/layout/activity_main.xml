@@ -14,7 +14,7 @@
         android:layout_height="@dimen/val_0dp"
         android:layout_marginTop="@dimen/val_7dp"
         android:gravity="center"
-        android:shadowColor="@color/text_shadow"
+        android:shadowColor="@color/black"
         android:shadowDx="11"
         android:shadowDy="11"
         android:shadowRadius="2"
@@ -36,10 +36,10 @@
         app:cardMaxElevation="@dimen/val_15dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
-        app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.8"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintWidth_percent="1">
 
         <LinearLayout
@@ -48,23 +48,17 @@
             android:layout_marginTop="@dimen/val_25dp"
             android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/first_int_layout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="@dimen/input_layout_width"
-                android:layout_height="@dimen/input_layout_height"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/validate_btn"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
                 android:layout_gravity="center"
-                app:errorEnabled="true"
-                app:helperTextTextColor="@color/design_default_color_error">
+                android:layout_marginTop="@dimen/val_10dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/white"
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/first_int_edt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:hint="@string/first_int_hint"
-                    android:inputType="number" />
-            </com.google.android.material.textfield.TextInputLayout>
+                />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/first_string_layout"
@@ -138,17 +132,23 @@
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/validate_btn"
-                android:layout_width="@dimen/button_width"
-                android:layout_height="@dimen/button_height"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/first_int_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="@dimen/input_layout_width"
+                android:layout_height="@dimen/input_layout_height"
                 android:layout_gravity="center"
-                android:layout_marginTop="@dimen/val_10dp"
-                android:background="@drawable/button_background"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/white"
+                app:errorEnabled="true"
+                app:helperTextTextColor="@color/design_default_color_error">
 
-                />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/first_int_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/first_int_hint"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

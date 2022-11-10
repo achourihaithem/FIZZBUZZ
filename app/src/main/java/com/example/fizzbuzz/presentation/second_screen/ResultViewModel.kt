@@ -3,7 +3,6 @@ package com.example.fizzbuzz.presentation.second_screen
 import androidx.lifecycle.ViewModel
 import com.example.fizzbuzz.domain.model.GameModel
 import com.example.fizzbuzz.domain.usecase.GenerateListUseCase
-import com.example.fizzbuzz.domain.usecase.ValidationUseCase
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

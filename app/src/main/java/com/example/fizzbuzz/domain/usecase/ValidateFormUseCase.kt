@@ -3,7 +3,7 @@ package com.example.fizzbuzz.domain.usecase
 import com.example.fizzbuzz.utils.Constants
 import org.koin.core.component.KoinComponent
 
-class ValidationUseCase: KoinComponent {
+class ValidateFormUseCase : KoinComponent {
     /**
      * check that the 1st int is higher or equals 1
      */

@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fizzbuzz.R
 
-class ItemRVAdapter (
+class ItemRVAdapter(
     private val listGame: List<String>
 ) : RecyclerView.Adapter<ItemRVAdapter.ItemViewHolder>() {
     override fun onCreateViewHolder(
@@ -24,7 +24,7 @@ class ItemRVAdapter (
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 
-        holder.idTextview.text= listGame[position]
+        holder.idTextview.text = listGame[position]
 
     }
 

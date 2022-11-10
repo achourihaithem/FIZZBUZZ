@@ -24,10 +24,14 @@ class ResultActivity : AppCompatActivity() {
 
 
         if (myData != null) {
-            binding.title.setText(
-                "the result of inserted parameters:\n ${myData.firstInt}" +
-                        ", ${myData.str1}, ${myData.secondInt}, ${myData.str2} & ${myData.limit} is :"
-            )
+            val rslt = StringBuilder()
+            rslt.append("the result of inserted parameters:\n ${myData.firstInt}")
+                .append(", ${myData.str1}")
+                .append(", ${myData.secondInt}")
+                .append(", ${myData.str2} ")
+                .append("& ${myData.limit}")
+                .append(" is :")
+            binding.title.text = rslt
             binding.idRvItems.layoutManager = GridLayoutManager(this, 1)
             binding.idRvItems.adapter = ItemRVAdapter(viewModel.showData(myData))
             //binding.idRvItems.adapter=itemRVAdapter

@@ -10,15 +10,17 @@ class GenerateListUseCase : KoinComponent {
         val multipleInt1Int2 = gameModel.firstInt * gameModel.secondInt
         for (position in 1..gameModel.limit) {
 
-            if (position % multipleInt1Int2 == 0L) {
-                myList.add(gameModel.str1 + gameModel.str2)
-            } else if (position % gameModel.firstInt == 0L && position != gameModel.secondInt.toLong()) {
-                myList.add(gameModel.str1)
-            } else if (position % gameModel.secondInt == 0L) {
-                myList.add(gameModel.str2)
-            } else {
-                myList.add(position.toString())
+            when {
+                position % multipleInt1Int2 == 0L -> myList.add(gameModel.str1 + gameModel.str2)
+
+                position % gameModel.firstInt == 0L && position != gameModel.secondInt.toLong()
+                -> myList.add(gameModel.str1)
+
+                position % gameModel.secondInt == 0L -> myList.add(gameModel.str2)
+
+                else -> myList.add(position.toString())
             }
+
         }
         return myList
     }

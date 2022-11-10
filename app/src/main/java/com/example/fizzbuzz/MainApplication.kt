@@ -7,7 +7,7 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.core.component.KoinComponent
 import org.koin.core.context.startKoin
 
-class MainApplication   : Application(), KoinComponent {
+class MainApplication : Application(), KoinComponent {
     override fun onCreate() {
         super.onCreate()
         configureDI()
@@ -21,10 +21,8 @@ class MainApplication   : Application(), KoinComponent {
             androidLogger()
             androidContext(this@MainApplication)
             modules(
-
                 AppModule.viewModelModule,
                 AppModule.useCasesModule,
-                //AppModule.adapterModule
             )
         }
     }

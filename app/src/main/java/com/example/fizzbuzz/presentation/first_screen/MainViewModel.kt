@@ -1,19 +1,19 @@
 package com.example.fizzbuzz.presentation.first_screen
 
 import androidx.lifecycle.ViewModel
-import com.example.fizzbuzz.domain.usecase.ValidationUseCase
+import com.example.fizzbuzz.domain.usecase.ValidateFormUseCase
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
 class MainViewModel : ViewModel(), KoinComponent {
 
-    private val validationUseCase: ValidationUseCase by inject()
+    private val validateFormUseCase: ValidateFormUseCase by inject()
 
     /**
      * check that the 1st int is higher or equals 1
      */
     fun validFirstInteger(firstInt: String): String? {
-        return validationUseCase.validFirstInteger(firstInt)
+        return validateFormUseCase.validFirstInteger(firstInt)
     }
 
     /**
@@ -21,8 +21,7 @@ class MainViewModel : ViewModel(), KoinComponent {
      * check that the 2nd int is higher or equals 1st int
      */
     fun validSecondInteger(firstInt: String, secondInt: String): String? {
-
-        return validationUseCase.validSecondInteger(firstInt, secondInt)
+        return validateFormUseCase.validSecondInteger(firstInt, secondInt)
     }
 
     /**
@@ -32,14 +31,14 @@ class MainViewModel : ViewModel(), KoinComponent {
      */
     fun validLimit(int2: String, limit: String): String? {
 
-        return validationUseCase.validLimit(int2, limit)
+        return validateFormUseCase.validLimit(int2, limit)
     }
 
     /**
      * check length of Strings
      */
     fun validStrings(str: String): String? {
-        return validationUseCase.validStrings(str)
+        return validateFormUseCase.validStrings(str)
     }
 
 }
