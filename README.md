@@ -36,7 +36,7 @@ I made a diagram to show the flow of the data between the three layers(data, dom
 * UI
     * This is the presentation layer. I have set up packages by feature here. This consists of the view related code.
 * DI
-    * This is where Dagger related code lives ,connected to the different layers of the application
+    * This is where Koin related code lives ,connected to the different layers of the application
 * Utils
     * This is where most extension functions and constants and some other utils functions exist.
 
