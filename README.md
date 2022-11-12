@@ -14,43 +14,43 @@ We'll be slightly modifying FizzBuzz to build a more flexible program. The key d
 
 ![Alt firstSceen](https://github.com/achourihaithem/FIZZBUZZ/blob/master/screenshots/first_screen.jpg?raw=false)
 ![Alt secondScreen](https://github.com/achourihaithem/FIZZBUZZ/blob/master/screenshots/second_screen.jpg?raw=false)
+# Project Architecture
 
-## Project Architecture
-![MVVM](https://user-images.githubusercontent.com/1812129/68319232-446cf900-00be-11ea-92cf-cad817b2af2c.png)
+### Communication between layers
+1. UI calls method from ViewModel.
+2. ViewModel executes Use case.
+3. Use case executes one or multiple Repositorie function.
+4. The Repository returns data from one or multiple Data Sources. the repository is the single source of truth
+5. Information flows back to the UI where we display the data fetched from data sources.
 
-Model-View-ViewModel (ie MVVM) is a template of a client application architecture, proposed by John Gossman as an alternative to MVC and MVP patterns when using Data Binding technology. MVVM suggests separating the data presentation logic(Views or UI) from the core business logic part of the application
-The separate code layers of MVVM are:
-- Model: This layer is responsible for the abstraction of the data sources. Model and ViewModel work together to get and save the data.
-- View: The purpose of this layer is to inform the ViewModel about the user’s action. This layer observes the ViewModel and does not contain any kind of application logic.
-- ViewModel: It exposes those data streams which are relevant to the View. Moreover, it serves as a link between the Model and the View.
+I made a diagram to show the flow of the data between the three layers(data, domain , presentation)
+![data flow diagram](screenshots/dataFlowDiagram.png )
 
-**MVVM Best Practice:**
-- Avoid references to Views in ViewModels.
-- Instead of pushing data to the UI, let the UI observe changes to it.
-- Distribute responsibilities, add a domain layer if needed.
-- Add a data repository as the single-point entry to your data.
-- Expose information about the state of your data using a wrapper or another LiveData.
-- Consider edge cases, leaks and how long-running operations can affect the instances in your architecture.
-- Don’t put logic in the ViewModel that is critical to saving clean state or related to data. Any call you make from a ViewModel can be the last one.
-
-
-## Project Structure
-
-1. **data**: It contains all the data accessing and manipulating components.
-2. **presentation**: View classes along with their corresponding ViewModel.
-3. **utils**: Utility classes.
-
+# Project Structure
+* Data
+    * This is my data layer and consisted of the Room Database associated classes, the Network
+    related classes including the CoinsService interface, and the Repository class as well as
+    the local and remote data sources
+* Domain
+    * This is the domain layer and consists of the domain model as well as the domain mapper
+* UI
+    * This is the presentation layer. I have set up packages by feature here. This consists of the view related code.
+* DI
+    * This is where Dagger related code lives ,connected to the different layers of the application
+* Utils
+    * This is where most extension functions and constants and some other utils functions exist.
 
 ## Libraries Used
 
 * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - store and manage UI-related data in a lifecycle conscious way
-* [Truth](https://truth.dev/) - Truth is a library for performing assertions in tests.
 * [ViewBinding](https://developer.android.com/topic/libraries/view-binding) - allows you to more easily write code that interacts with views.
+* [Koin](https://insert-koin.io) - dependency injector
+* [Espresso](https://developer.android.com/training/testing/espresso/) - UI test
+* [Truth](https://github.com/google/truth) - Makes your test assertions and failure messages more readable
 
 
 ## to be added
 - Save output history in a local database
 - Improve design
-- Add dependency injection
 - Add UI tests
  
