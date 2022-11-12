@@ -2,7 +2,6 @@ package com.example.fizzbuzz.presentation.first_screen
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fizzbuzz.R
 import com.example.fizzbuzz.databinding.ActivityMainBinding
@@ -51,10 +50,6 @@ class MainActivity : AppCompatActivity() {
         val isValidLimit = binding.limitLayout.helperText == null
         val isValidFirstString = binding.firstStringLayout.helperText == null
         val isValidSecondString = binding.secondStringLayout.helperText == null
-        Log.d("validationErrorFInt", isValidFirstInt.toString())
-        Log.d("validationErrorSInt", isValidSecondInt.toString())
-        Log.d("validationErrorLimit ", isValidLimit.toString())
-
 
         if (isValidFirstInt && isValidSecondInt && isValidLimit && isValidFirstString && isValidSecondString) {
             val gameModel = GameModel(
