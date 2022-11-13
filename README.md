@@ -19,7 +19,7 @@ We'll be slightly modifying FizzBuzz to build a more flexible program. The key d
 ### Communication between layers
 1. UI calls method from ViewModel.
 2. ViewModel executes Use case.
-3. Use case executes one or multiple Repositorie function.
+3. Use case executes one or multiple Repositories function.
 4. The Repository returns data from one or multiple Data Sources. the repository is the single source of truth
 5. Information flows back to the UI where we display the data fetched from data sources.
 
@@ -28,9 +28,8 @@ I made a diagram to show the flow of the data between the three layers(data, dom
 
 # Project Structure
 * Data
-    * This is my data layer and consisted of the Room Database associated classes, the Network
-    related classes including the CoinsService interface, and the Repository class as well as
-    the local and remote data sources
+    * Would dispense the required data for the application to the domain layer 
+      by implementing interface exposed by the domain
 * Domain
     * This is the domain layer and consists of the domain model as well as the domain mapper
 * UI
@@ -39,6 +38,7 @@ I made a diagram to show the flow of the data between the three layers(data, dom
     * This is where Koin related code lives ,connected to the different layers of the application
 * Utils
     * This is where most extension functions and constants and some other utils functions exist.
+
 
 ## Libraries Used
 
@@ -52,5 +52,4 @@ I made a diagram to show the flow of the data between the three layers(data, dom
 ## to be added
 - Save output history in a local database
 - Improve design
-- Add UI tests
  
